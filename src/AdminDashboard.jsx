@@ -563,6 +563,9 @@ function ProductsSection() {
             <Icon name="plus" size={15}/>
             Add Product
           </button>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded">
+  HELLO
+</button>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[560px]">
