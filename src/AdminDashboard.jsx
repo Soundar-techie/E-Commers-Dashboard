@@ -873,7 +873,7 @@ function Sidebar({ active, setActive, open, setOpen }) {
           <div className="flex items-center gap-3 px-2 py-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer">
             <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0">JD</div>
             <div className="min-w-0">
-              <p className="text-sm font-semibold text-slate-700 dark:text-slate-200 truncate">Jamie Davis</p>
+              <p className="text-sm font-semibold text-slate-700 dark:text-slate-200 truncate">Blue Boy</p>
               <p className="text-xs text-slate-400 truncate">Super Admin</p>
             </div>
             <div className="ml-auto w-2 h-2 bg-emerald-400 rounded-full flex-shrink-0"/>
