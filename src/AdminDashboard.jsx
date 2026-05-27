@@ -269,16 +269,16 @@ function Avatar({ initials, size = "w-8 h-8", text = "text-xs" }) {
 function Modal({ open, onClose, title, children }) {
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm"
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm overflow-y-auto"
       onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
-      <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl w-full max-w-md border border-slate-200 dark:border-slate-700">
-        <div className="flex items-center justify-between p-5 border-b border-slate-100 dark:border-slate-700">
+      <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl w-full max-w-md border border-slate-200 dark:border-slate-700 my-auto max-h-[90vh] flex flex-col">
+        <div className="flex items-center justify-between p-5 border-b border-slate-100 dark:border-slate-700 flex-shrink-0">
           <h3 className="font-semibold text-slate-800 dark:text-slate-100">{title}</h3>
           <button onClick={onClose} className="w-8 h-8 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700 flex items-center justify-center text-slate-400 transition-colors">
             <Icon name="close" size={16}/>
           </button>
         </div>
-        <div className="p-5">{children}</div>
+        <div className="p-5 overflow-y-auto flex-1">{children}</div>
       </div>
     </div>
   );
@@ -563,9 +563,6 @@ function ProductsSection() {
             <Icon name="plus" size={15}/>
             Add Product
           </button>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded">
-  HELLO
-</button>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[560px]">
